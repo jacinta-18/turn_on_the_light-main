@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn on the light</title>
+</head>
+<body>
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <button id="myBtn1">Turn on the light</button>
+
+    <img id="myImage" src="img/pic_bulboff.gif" style="width:100px">
+
+    <button id="myBtn2">Turn off the light</button>
+
+    <!-- 1. Create intern script tag `<script type="text/javascript"></script>`
+    2. Give button 1 `id` of `myBtn1`
+    3. Use JavaScript `document` to target `myBtn1` id and store in a const variable called `btn1`
+    4. Give the second button id of `myBtn2`
+    5. Use JavaScript `document` to target `myBtn2` id and store in a const variable called `btn2`
+    6. Add event listener to each of the buttons and replace the image `src` attribute.
+    7. Make sure you remove the `onclick` attribute in the two button tags.
+     -->
+
+    <script>
+    const btn1 = document.getElementById('myBtn1')
+    const btn2 = document.getElementById('myBtn2')
+
+
+     myBtn1.addEventListener("click", function() {
+  myImage.src = "img/pic_bulbon.gif";
+});
+
+
+myBtn2.addEventListener("click", function() {
+  myImage.src = "img/pic_bulboff.gif";
+});
+
+</script>
+</body>
+</html>
